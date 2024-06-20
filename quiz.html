@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Quiz Portal</h2>
+        <div class="question" id="question"></div>
+        <div class="options" id="options"></div>
+        <form id="quizForm" method="POST" action="quiz.php">
+            <input type="hidden" id="quiz_id" name="quiz_id" value="1"> <!-- Assuming quiz_id is known -->
+            <input type="hidden" id="username" name="username" value="john_doe"> <!-- Assuming username is known -->
+            <input type="hidden" id="question_id" name="question_id">
+            <input type="hidden" id="correct_answer" name="correct_answer">
+            <input type="hidden" id="marks" name="marks">
+            <button type="submit" id="submitBtn" name="submit">Submit</button>
+            <button type="button" id="nextBtn">Next</button>
+        </form>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
